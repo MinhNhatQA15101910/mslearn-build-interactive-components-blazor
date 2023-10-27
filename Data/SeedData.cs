@@ -5,7 +5,7 @@ internal static class SeedData
     internal static Task InitializeAsync(PizzaStoreContext db)
     {
         PizzaSpecial[] specials =
-        [
+        {
             new()
             {
                 Name = "Basic Cheese Pizza",
@@ -61,7 +61,7 @@ internal static class SeedData
                 BasePrice = 9.99m,
                 ImageUrl = "img/pizzas/margherita.jpg",
             },
-        ];
+        };
         db.Specials.AddRange(specials);
         return db.SaveChangesAsync();
     }

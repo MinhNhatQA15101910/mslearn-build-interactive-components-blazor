@@ -1,8 +1,11 @@
 namespace BlazingPizza.Data;
 
-public sealed class PizzaStoreContext(DbContextOptions options)
-    : DbContext(options)
+public class PizzaStoreContext : DbContext
 {
+    public PizzaStoreContext(DbContextOptions options) : base(options)
+    {
+    }
+
     public DbSet<Order> Orders => Set<Order>();
 
     public DbSet<Pizza> Pizzas => Set<Pizza>();

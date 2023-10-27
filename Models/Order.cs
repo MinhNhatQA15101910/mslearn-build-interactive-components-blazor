@@ -10,7 +10,7 @@ public class Order
 
     public Address DeliveryAddress { get; set; } = new();
 
-    public List<Pizza> Pizzas { get; set; } = [];
+    public List<Pizza> Pizzas { get; set; } = new();
 
     public decimal GetTotalPrice() =>
         Pizzas.Sum(p => p.GetTotalPrice());
