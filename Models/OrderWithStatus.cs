@@ -11,7 +11,7 @@ public class OrderWithStatus
     public string StatusText { get; set; } = default!;
 
     public bool IsDelivered => StatusText is "Delivered";
-
+    
     public static OrderWithStatus FromOrder(Order order)
     {
         // To simulate a real backend process, we fake status updates based on the amount
